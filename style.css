@@ -1,0 +1,275 @@
+@import url('reset.css');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Noto Sans TC', sans-serif;
+  background-color: #fff;
+  color: #000;
+  line-height: 1.6;
+}
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Logo */
+.logo img { 
+  height: 60px;
+  width: auto;
+  background-image: url(../mine/logo.png);
+}
+
+/* Header */
+header {
+  border-bottom: 1px solid #000;
+}
+header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 0;
+}
+
+/* Navbar */
+.navbar {
+  position: relative;
+}
+.nav-menu {
+  display: flex;
+  list-style: none;
+}
+.nav-menu > li {
+  position: relative;
+  margin-left: 30px;
+}
+.nav-menu a {
+  text-decoration: none;
+  color: #000;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+.submenu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #fff;
+  border: 1px solid #000;
+  list-style: none;
+  z-index: 1;
+}
+.nav-menu li:hover .submenu {
+  display: block;
+}
+.submenu li a {
+  padding: 10px 20px;
+  display: block;
+  white-space: nowrap;
+}
+
+/* Mobile Toggle */
+.mobile-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+/* Hero Slider */
+.hero-slider {
+  position: relative;
+  overflow: hidden;
+}
+.slides {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+.slide {
+  min-width: 100%;
+}
+.slide img {
+  width: 100%;
+  display: block;
+}
+.prev, .next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255,255,255,0.8);
+  border: none;
+  font-size: 24px;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  cursor: pointer;
+}
+.prev { left: 10px; }
+.next { right: 10px; }
+
+/* Sections */
+section {
+  padding: 60px 0;
+}
+section h2 {
+  font-size: 24px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  margin-bottom: 20px;
+}
+
+.section-about p {
+  margin-bottom: 10px;
+  font-size: 15px;
+}
+.btn {
+  display: inline-flex;
+  align-items: center;
+  padding: 10px 20px;
+  border: 1px solid #000;
+  text-decoration: none;
+  font-weight: 500;
+  color: #000;           
+  transition: background 0.3s, color 0.3s;
+}
+
+.btn:hover {
+  background-color: #000;
+  color: #fff;
+}
+
+/* Equipment */
+.equipment-list {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+}
+.equipment-list li {
+  flex: 1 1 25%;
+  text-align: center;
+  padding: 20px;
+}
+.equipment-list img {
+  max-width: 100%;
+  height: auto;
+}
+.equipment-list span {
+  display: block;
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+/* Service Items */
+.section-service .service-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 40px;
+}
+.service-item img {
+  max-width: 200px;
+  margin-right: 20px;
+}
+.service-item h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+.service-item p {
+  font-size: 14px;
+}
+
+/* Client Logos */
+.client-list {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+}
+.client-list li {
+  flex: 1 1 20%;
+  padding: 10px;
+  text-align: center;
+}
+.client-list img {
+  max-width: 300px;
+}
+
+/* Reviews */
+.section-review .review-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.review-item img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  margin-right: 15px;
+}
+.review-item p {
+  font-size: 14px;
+}
+
+/* Footer */
+.site-footer {
+  background-color: #000;
+  color: #fff;
+}
+.site-footer .container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 40px 0;
+}
+.social-links a img {
+  height: 50px;
+  width: 50px;
+  margin-right: 10px;
+}
+.footer-nav {
+  display: flex;
+  list-style: none;
+  margin: 20px 0;
+}
+.footer-nav li {
+  margin-right: 20px;
+}
+.footer-nav a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 14px;
+}
+.contact-info p, .copyright {
+  font-size: 12px;
+  margin-bottom: 5px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .navbar .nav-menu {
+    display: none;
+    flex-direction: column;
+    background-color: #fff;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    border-top: 1px solid #000;
+  }
+  .mobile-toggle {
+    display: block;
+  }
+  .navbar.active .nav-menu {
+    display: flex;
+  }
+  .section-service .service-item {
+    flex-direction: column;
+  }
+  .equipment-list li, .client-list li {
+    flex: 1 1 50%;
+  }
+}

@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>高宇鑽孔切割工程行</title>
+  <link rel="stylesheet" href="style.css" /> 
+</head>
+
+<body>
+  <!-- Header & 主選單 -->
+  <header>
+    <div class="container">
+      <a href="/" class="logo">
+        <img src="img/logo.png" alt="高宇鑽孔切割企業行">
+      </a>
+      <nav class="navbar">
+        <ul class="nav-menu">
+          <li><a href="#about">關於高宇企業行</a></li>
+          <li>
+            <a href="#service">鑽孔切割</a>
+            <ul class="submenu">
+              <li><a href="#">鑽孔工程</a></li>
+              <li><a href="#">切割工程</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#fee">報價方案</a>
+            <ul class="submenu">
+              <li><a href="#">施工報價</a></li>
+              <li><a href="#">施作實績</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#works">工程實績</a>
+            <ul class="submenu">
+              <li><a href="#">台北切割工程</a></li>
+              <li><a href="#">台北鑽孔工程</a></li>
+             
+            </ul>
+          </li>
+          <li><a href="#contact">聯絡我們</a></li>
+        </ul>
+        <button class="mobile-toggle">☰</button>
+      </nav>
+    </div>
+  </header>
+
+  <!-- 首頁輪播（Hero Slider） -->
+  <section class="hero-slider">
+    <div class="slides">
+      <div class="slide"><img src="img/pic2.webp" alt="高宇鑽孔切割工程行"></div>
+      <div class="slide"><img src="img/pic3.webp" alt="高宇鑽孔切割工程行"></div>
+    </div>
+    <button class="prev">‹</button>
+    <button class="next">›</button>
+  </section>
+
+
+  <script>
+  // 選取 slide 容器和按钮
+  const slides = document.querySelector('.slides');
+  const prevBtn = document.querySelector('.prev');
+  const nextBtn = document.querySelector('.next');
+  const total = slides.children.length;
+  let idx = 0;
+
+  // 更新 slide 的位置
+  function updateSlide() {
+    slides.style.transform = `translateX(-${idx * 100}%)`;
+  }
+
+  // 下一張
+  nextBtn.addEventListener('click', () => {
+    idx = (idx + 1) % total;
+    updateSlide();
+  });
+
+  // 上一張
+  prevBtn.addEventListener('click', () => {
+    idx = (idx - 1 + total) % total;
+    updateSlide();
+  });
+
+</script>
+
+  <main>
+    <!-- About Us -->
+    <section id="about" class="section-about">
+      <div class="container">
+        <h2>ABOUT US</h2>
+		<p>經營理念</p>
+		<p>專業施工 誠信服務</p>
+        <p>
+          在牆體鑽孔、切割行業，使用工業鑽石、刀片、鑽頭，鋼絲切割和打孔混凝土、金屬等的方法。因為這些施工方法是噪音，振動和灰塵散射小，如不損害城市功能的生態友好的方法，在許多領域贏得了極高的聲譽。此外，我們在地面處理，錨固施工等各種工程中取得了很多成果。
+我們的技術和增強設備，旨在提供符合您期望的高水平建築。
+        </p>
+        <a href="#" class="btn">查看工程實績</a>
+      </div>
+    </section>
+
+    <!-- Equipment -->
+    <section id="equipment" class="section-equipment">
+      <div class="container">
+        <h2>EQUIPMENT 專業設備</h2>
+        <ul class="equipment-list">
+          <li>
+            <img src="img/ma1.jpeg" alt="道路切割機">
+            <span>道路切割機</span>
+          </li>
+          <li>
+            <img src="img/ma2.webp" alt="牆壁切割機">
+            <span>牆壁切割機</span>
+          </li>
+          <li>
+            <img src="img/ma3.jpg" alt="鑽孔機">
+            <span>鑽孔機</span>
+          </li>
+          <li>
+            <img src="img/ma4.jpeg" alt="各類型鑽孔機">
+            <span>各類型鑽孔機</span>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Service -->
+    <section id="service" class="section-service">
+      <div class="container">
+        <h2>SERVICE 鑽孔切割</h2>
+
+		<div id="service-drill" class="service-item">
+			<img src="img/H1.jpg" alt="鑽孔工程">
+			<div class="service-text">
+				<h3>鑽孔工程</h3>
+				
+				<p>
+					1寸~14寸各類型鑽孔，如水電、消防、空調、瓦斯、排油煙機及<br>擋土牆連續壁鑽孔，穿樑鑽孔、大型結構體開口等。
+				</p>
+			</div>
+		</div>
+
+        <div id="service-cut" class="service-item">
+          <img src="img/H2 (2).jpg" alt="切割工程">
+		  <div class="service-text">
+			 <h3>切割工程</h3>
+          <p>
+            各類型切割服務，包括冷氣窗、窗戶、樓梯口、通風口等開口及道路瀝青、伸縮縫、球場等大型馬路切割。
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Works -->
+    <section id="works" class="section-works">
+      <div class="container">
+        <h2>WORKS 指標客戶</h2>
+        <p>憑藉卓越技術和豐富經驗，我們為各大廠商提供最佳解決方案：</p>
+        <ul class="client-list">
+          <li><img src="img/man1.webp" alt="股份有限公司"></li>
+          <li><img src="img/man1.webp" alt="工程有限公司"></li>
+          <li><img src="img/man1.webp" alt="工程有限公司"></li>
+          <!-- 其他客戶 Logo -->
+        </ul>
+      </div>
+    </section>
+
+    <!-- Review -->
+    <section id="review" class="section-review">
+      <div class="container">
+        <h2>REVIEW 客戶評價</h2>
+
+        <div class="review-item">
+          <img src="img/review1.png" alt="">
+          <p>技術讓我很安心！擋土牆的配管鑽孔沒有任何問題，感謝。 </p>
+        </div>
+        <div class="review-item">
+          <img src="img/review2.png" alt="">
+          <p>切割技術很好，工程進展順暢，非常滿意。 </p>
+        </div>
+		        <div class="review-item">
+          <img src="img/review3.png" alt="">
+          <p>服務積極，技術好，回覆快、專業。感謝。 </p>
+        </div>
+        <!-- 更多評價 -->
+      </div>
+    </section>
+
+  <!-- Footer -->
+  <footer id="contact" class="site-footer">
+    <div class="container">
+      <div class="social-links">
+        <a href="https://line.me/"><img src="img/line_logo.png" alt="LINE"></a>
+        <a href="https://www.facebook.com/"><img src="img/Facebook_Logo.png" alt="Facebook"></a>
+      </div>
+      <ul class="footer-nav">
+        <li><a href="#about">關於高宇</a></li>
+        <li><a href="#service">鑽孔切割</a></li>
+        <li><a href="#fee">報價方案</a></li>
+        <li><a href="#works">工程實績</a></li>
+        <li><a href="#contact">聯絡我們</a></li>
+      </ul>
+      <div class="contact-info">
+        <p>公司統編: 93922064</p>
+        <p>電話: 02-2332-3387 / 0932-531-646</p>
+        <p>地址: 台北市萬華區和平西路三段300之11號</p>
+      </div>
+      <div class="copyright">
+        &copy; 2025 高宇鑽孔切割工程行 All Rights Reserved. <br>專業施工 誠信服務
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
